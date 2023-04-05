@@ -1,5 +1,5 @@
 import satori, { SatoriOptions } from "satori";
-import { SITE } from "@config";
+import { BASE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
 
@@ -101,12 +101,12 @@ const ogImage = (text: string) => {
                 "
               </span>
               <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {SITE.author}
+                {BASE.author}
               </span>
             </span>
 
             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {SITE.title}
+              {BASE.title}
             </span>
           </div>
         </div>
@@ -135,7 +135,7 @@ const options: SatoriOptions = {
   ],
 };
 
-const generateOgImage = async (mytext = SITE.title) => {
+const generateOgImage = async (mytext = BASE.title) => {
   const svg = await satori(ogImage(mytext), options);
 
   // render png in production mode

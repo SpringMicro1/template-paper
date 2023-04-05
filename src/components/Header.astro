@@ -1,5 +1,5 @@
 ---
-import { LOGO_IMAGE, SITE } from "@config";
+import { BASE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
@@ -19,15 +19,15 @@ const { activeNav } = Astro.props;
     <div class="top-nav-wrap">
       <a href="/" class="logo">
         {
-          LOGO_IMAGE.enable ? (
+          BASE.LOGO_IMAGE_ENABLE ? (
             <img
-              src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
+              src={BASE.LOGO_IMAGE_SVG ? logoSVG : logoPNG}
               alt="AstroPaper Logo"
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
+              width={BASE.LOGO_IMAGE_WIDTH}
+              height={BASE.LOGO_IMAGE_HEIGHT}
             />
           ) : (
-            SITE.title
+            BASE.title
           )
         }
       </a>
@@ -80,7 +80,7 @@ const { activeNav } = Astro.props;
           </li>
           <li>
             {
-              SITE.lightAndDarkMode && (
+              BASE.lightAndDarkMode && (
                 <button
                   id="theme-btn"
                   class="focus-outline"

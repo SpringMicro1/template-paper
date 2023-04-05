@@ -1,5 +1,5 @@
 ---
-import { SITE } from "@config";
+import { BASE } from "@config";
 import "@styles/base.css";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -12,16 +12,16 @@ export interface Props {
 }
 
 const {
-  title = SITE.title,
-  author = SITE.author,
-  description = SITE.desc,
-  ogImage = SITE.ogImage,
+  title = BASE.title,
+  author = BASE.author,
+  description = BASE.desc,
+  ogImage = BASE.ogImage,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const socialImageURL = new URL(
-  ogImage ? ogImage : SITE.ogImage,
+  ogImage ? ogImage : BASE.ogImage,
   Astro.url.origin
 ).href;
 ---

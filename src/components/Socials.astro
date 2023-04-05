@@ -1,5 +1,5 @@
 ---
-import { SOCIALS } from "@config";
+import { HOME } from "@config";
 import LinkButton from "./LinkButton.astro";
 import socialIcons from "@assets/socialIcons";
 
@@ -12,13 +12,13 @@ const { centered = false } = Astro.props;
 
 <div class={`social-icons ${centered ? "flex" : ""}`}>
   {
-    SOCIALS.filter(social => social.active).map(social => (
+    Object.keys(HOME.LINKS).map(key => (
       <LinkButton
-        href={social.href}
+        href={HOME.LINKS[key].href}
         className="link-button"
-        title={social.linkTitle}
+        title={HOME.LINKS[key].content}
       >
-        <Fragment set:html={socialIcons[social.name]} />
+        <Fragment set:html={socialIcons[key.split("Link ")[1]]} />
       </LinkButton>
     ))
   }
