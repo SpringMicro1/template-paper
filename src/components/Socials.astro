@@ -2,6 +2,7 @@
 import { HOME } from "@config";
 import LinkButton from "./LinkButton.astro";
 import socialIcons from "@assets/socialIcons";
+import type { SocialIcons } from "types";
 
 export interface Props {
   centered?: boolean;
@@ -14,11 +15,13 @@ const { centered = false } = Astro.props;
   {
     Object.keys(HOME.LINKS).map(key => (
       <LinkButton
-        href={HOME.LINKS[key].href}
+        href={HOME.LINKS[key as keyof typeof HOME.LINKS].href}
         className="link-button"
-        title={HOME.LINKS[key].content}
+        title={HOME.LINKS[key as keyof typeof HOME.LINKS].content}
       >
-        <Fragment set:html={socialIcons[key.split("Link ")[1]]} />
+        <Fragment
+          set:html={socialIcons[key.split("Link ")[1] as keyof SocialIcons]}
+        />
       </LinkButton>
     ))
   }
