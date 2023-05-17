@@ -53,8 +53,8 @@ export const ABOUT = {
   },
   IMAGES: {
     "Blog Picture": {
-      Src: "https://astro-paper.pages.dev/assets/dev.svg.svg",
-      Alt: "Blog picture",
+      src: "https://astro-paper.pages.dev/assets/dev.svg.svg",
+      alt: "Blog picture",
     },
   },
 };
