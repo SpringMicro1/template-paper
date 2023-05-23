@@ -8,9 +8,9 @@ export async function get() {
   const posts = await getCollection("blog");
   const sortedPosts = getSortedPosts(posts);
   return rss({
-    title: BASE.title,
-    description: BASE.desc,
-    site: BASE.website,
+    title: BASE.TITLE,
+    description: BASE.DESC,
+    site: BASE.WEBSITE,
     items: sortedPosts.map(({ data }) => ({
       link: `posts/${slugify(data)}`,
       title: data.title,

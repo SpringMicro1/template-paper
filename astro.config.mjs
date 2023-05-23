@@ -8,7 +8,7 @@ import { BASE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: BASE.website,
+  site: BASE.WEBSITE,
   integrations: [
     tailwind({
       config: {

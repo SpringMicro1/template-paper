@@ -6,12 +6,12 @@ import Header from "@components/Header.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title={`${ABOUT.TEXT.Heading} | ${BASE.title}`}>
+<Layout title={`${ABOUT.TEXT.HEADING} | ${BASE.TITLE}`}>
   <Header activeNav="about" />
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{ABOUT.TEXT.Heading}</h1>
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{ABOUT.TEXT.HEADING}</h1>
       <div>
         <img
           src={ABOUT.IMAGES["Blog Picture"].src}
@@ -19,7 +19,7 @@ import Layout from "@layouts/Layout.astro";
           alt={ABOUT.IMAGES["Blog Picture"].alt}
         />
       </div>
-      {ABOUT.TEXT.Description}
+      {ABOUT.TEXT.DESCRIPTION}
     </section>
   </main>
   <Footer />

@@ -35,7 +35,7 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const tagPosts = getPostsByTag(posts, tag);
 ---
 
-<Layout title={`Tag:${tag} | ${BASE.title}`}>
+<Layout title={`Tag:${tag} | ${BASE.TITLE}`}>
   <Header activeNav="tags" />
   <Main
     pageTitle={`Tag:${tag}`}

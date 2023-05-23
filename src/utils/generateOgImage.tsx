@@ -101,12 +101,12 @@ const ogImage = (text: string) => {
                 "
               </span>
               <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {BASE.author}
+                {BASE.AUTHOR}
               </span>
             </span>
 
             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {BASE.title}
+              {BASE.TITLE}
             </span>
           </div>
         </div>
@@ -135,7 +135,7 @@ const options: SatoriOptions = {
   ],
 };
 
-const generateOgImage = async (mytext = BASE.title) => {
+const generateOgImage = async (mytext = BASE.TITLE) => {
   const svg = await satori(ogImage(mytext), options);
 
   // render png in production mode

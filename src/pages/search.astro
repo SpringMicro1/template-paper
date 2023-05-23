@@ -18,7 +18,7 @@ const searchList = posts.map(({ data }) => ({
 }));
 ---
 
-<Layout title={`Search | ${BASE.title}`}>
+<Layout title={`Search | ${BASE.TITLE}`}>
   <Header activeNav="search" />
   <Main pageTitle="Search" pageDesc="Search any article ...">
     <Search client:load searchList={searchList} />
