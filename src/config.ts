@@ -6,6 +6,7 @@ export const BASE = {
   AUTHOR: "Sat Naing",
   DESC: "A minimal, responsive and SEO-friendly Astro blog theme.",
   TITLE: "AstroPaper",
+  COMPANY_NAME: "AstroPaper",
   OG_IMAGE: "astropaper-og.jpg",
   LIGHT_AND_DARK_MODE: true,
   POSTS_PER_PAGE: 3,
@@ -57,4 +58,24 @@ export const ABOUT = {
       alt: "Blog picture",
     },
   },
+};
+
+export const CONTACT = {
+  TEXT: {
+    DESCRIPTION: "Get in touch.",
+    PARAGRAPH:
+      "Have something to say? We are here to help. Fill out the form, send an email, or call us on the phone.",
+    ADDRESS: "123 Example Street; My Place, NY 00000",
+  },
+  LINKS: {
+    EMAIL: {
+      href: "me@example.com",
+      content: "me@example.com",
+    },
+    PHONE: {
+      href: "+12015555555",
+      content: "+1 (201) 555-5555",
+    },
+  },
+  IMAGES: {},
 };
